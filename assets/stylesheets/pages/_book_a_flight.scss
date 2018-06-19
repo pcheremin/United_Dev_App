@@ -1,0 +1,282 @@
+.mw-book-a-flight {
+  .rqrd, .caption-required {
+    color: $red1;
+  }
+  button {
+    &.ui-datepicker-trigger {
+      position: absolute;
+      margin: 6px 0 0 -26px;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      display: inline-block;
+      background-color: transparent;
+      @include sprites-iconCalendar_gr;
+    }
+  }
+  .page-title {
+    display: none;
+    &.title-active {
+      display: block;
+    }
+  }
+  h2 {
+    &.legend {
+      font-weight: bold;
+    }
+  }
+  .mw-select {
+    color: $text_color2;
+    display: inline-block;
+    position: relative;
+    cursor: default;
+    line-height: 34px;
+    height: auto;
+    vertical-align: middle;
+    border: solid 1px $color_gray3;
+    width: 100%;
+    background-color: #fff;
+    text-decoration: none;
+  }
+  .mw-down-arrow {
+    padding-left: $padding;
+    &:after {
+      content: '';
+      @include sprites-formDropdown;
+      display: block;
+      float: right;
+      margin: $margin $margin_half 0 0;
+    }
+  }
+  #search-summary-wrapper {
+    fieldset:first-child {
+      padding-top: 0;
+    }
+  }
+  #flightBooking-recentSearch {
+    display: none;
+  }
+  .mw-separator-box {
+    height: 10px;
+    background: $color_gray2;
+    border-top: $border1;
+  }
+  #corporate-booking-section {
+    & + .mw-separator-box {
+      display: none;
+    }
+  }
+  .mw-section {
+    padding: $padding_dbl 0;
+  }
+  #award-container {
+    .adsearch-sign-in-message {
+      display: none;
+    }
+  }
+  .toggle-buttons {
+    input {
+      &[type='checkbox'], &[type='radio'] {
+        border: 0;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px,1px,1px,1px);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        & + label {
+          border: 2px solid $color_gray2;
+          color: #000;
+          line-height: 1;
+          padding: $padding/2 $padding;
+          margin-right: $margin;
+          height: 3em;
+          line-height: 2em;
+          background-color: $color_gray2;
+          display: inline-block;
+          width: 46%;
+          text-align: center;
+          &:last-child {
+            margin-top: $margin;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border: 1px solid $color_gray5;
+            background: $color_gray1;
+            background: linear-gradient(-45deg,$color_gray2 0%,#fff 90%);
+          }
+        }
+        &:checked {
+          & + label {
+            color: #fff;
+            background-color: $color_blue1;
+            border: 2px solid $color_blue1;
+            &::after {
+              content: '';
+              width: 8px;
+              height: 8px;
+              background: $color_blue1;
+              position: absolute;
+              top: 4px;
+              left: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  label{
+    &.ifl {
+      display: block;
+      padding: $padding;
+      line-height: 20px;
+      color: $text_color3;
+      position: absolute;
+      @include ellipsis;
+      z-index: 1;
+    }
+  }
+  span {
+    &.twitter-typeahead {
+      width: 100%;
+    }
+  }
+  .btn-link {
+    font-size: 12px;
+    line-height: inherit;
+    font-weight: 400;
+    border: 0;
+    color: #2172ba;
+    background-image: none;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: auto;
+    min-width: auto;
+  }
+  .dropdown {
+    position: absolute;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    display: none;
+    h3 {
+      font-size: 100%;
+      font-weight: 600;
+      margin: .8333em;
+    }
+    .dropdown-panel {
+      padding-bottom: .3333em;
+      @include prefixer_all(box-shadow, 0 5px 10px rgba(0,0,0,.2));
+      background-color: #fff;
+      overflow: hidden;
+      min-height: 30px;
+    }
+    .dropdown-empty-placeholder {
+      margin: 0;
+      text-align: center;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 10px;
+      color: #000;
+      padding: .8333em;
+    }
+    .dropdown-footer {
+      border-top: 1px solid #ccc;
+      padding-bottom: 0;
+      margin: 10px 10px 0 10px;
+      font-size: 12px;
+      line-height: 30px;
+    }
+  }
+  .mw-location-select-wrapper {
+    background-position: 0 -170px;
+    line-height: 34px; 
+    padding: 0;
+    position: relative;
+    font-size: 12px;
+    background-color: #fff;
+    border: solid 1px $color_gray3;
+    overflow: visible;
+    background-image: none;
+    height: auto;
+  }
+  .mw-location-select {
+    opacity: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    height: 34px;
+    top: 0;
+    left: 0;
+    width: 100%!important;
+    z-index: 2;
+    margin: -1px 0;
+  }
+  .mw-form-row {
+    clear: both;
+    margin-bottom: $margin;
+  }
+  .airport-autocomplete {
+    .tt-menu {
+      background: #fff;
+      color: #000;
+      margin-top: -1px;
+      width: 100%;
+      @include prefixer_all(box-shadow, rgba(0,0,0,.2) 0 5px 8px);
+      .tt-suggestion {
+        padding: 5px 10px;
+        color: #000;
+        font-size: 12px;
+        line-height: 20px;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+  .mw-dates, .mw-time {
+    .form-group {
+      float: left;
+      width: 47%;
+      margin: 0 2% $margin 0;
+      overflow: hidden;
+    }
+  }
+  .section-top-border {
+    border-top: 1px #ccc solid;
+    margin-top: $padding;
+    padding-top: $padding;
+  }
+  #dest3, #dest4, #dest5, #dest6 {
+    display: none;
+  }
+  label {
+    &.above {
+      display: block;
+      clear: both;
+      margin-bottom: .5em;
+      font-weight: 300;
+    }
+  }
+  .mw-connections {
+    margin-top: $margin;
+  }
+  #multCityOption {
+    .form-row-autocomplete {
+      .form-group {
+        clear: both;
+        margin-bottom: $margin;
+      }
+    }
+  }
+}

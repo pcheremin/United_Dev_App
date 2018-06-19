@@ -1,0 +1,8 @@
+---
+- :output_file: main.js
+  :input_directories:
+    - main
+  :input_files:
+  - http://downloads.moovweb.com/uranium/1.0.184/uranium-pretty.js
+  - vendor/jquery.DOMNodeAppear.js
+  - mw.united.js

@@ -1,0 +1,28 @@
+{
+  "name": "united",
+  "version": "0.0.0",
+  "main": "scripts/moov_main.js",
+  "dependencies": {
+    "moov_rewriter": "2.2.3",
+    "moov_stdlib": "2.6.23",
+    "moov_perf": "1.2.3"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "moov_builder": "2.4.12",
+    "pre-commit": "1.2.2"
+  },
+  "scripts": {
+    "bundle": "node --harmony ./node_modules/.bin/moov_builder",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jshint": "if node_modules/moov_builder/node_modules/.bin/jshint -c .jshintrc --exclude-path .jshintignore .; then exit 0; else echo \"\nIt looks like JSHint has found issues with your JavaScript code.\nPlease clear the errors listed above before committing.\n\" && exit 1; fi"
+  },
+  "pre-commit": {
+    "run": [
+      "jshint"
+    ],
+    "silent": true
+  },
+  "author": "Moovweb",
+  "license": "MIT"
+}

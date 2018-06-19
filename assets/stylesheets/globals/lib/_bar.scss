@@ -1,0 +1,105 @@
+// bar style
+
+@mixin bar-base {
+  font-weight: 600;
+  display: block;
+  padding: 15px 10px 17px 10px;
+  position: relative;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 1;
+  
+  &:visited, &:hover, a:visited, a:hover {
+    text-decoration: none;
+  }
+}
+
+// yupu will modified it when we are ready to add toggler icons
+// @mixin plus-minus {
+//   padding-right: 28px;
+//   &[data-ur-state="disabled"] {
+//     &:after {
+//       content: "+";
+//       display: block;
+//       @include icon-base;
+//     }
+//   }
+//
+//   &[data-ur-state="enabled"] {
+//     &:after {
+//       content: "−";
+//       display: block;
+//       @include icon-base;
+//     }
+//   }
+// }
+//
+// @mixin r-arrow {
+//   &:after {
+//     @include icon-base;
+//     top:4px;
+//     font-size: 14px;
+//     content: "\25B6";
+//     display: block;
+//   }
+// }
+
+
+// 
+@mixin bar1 { //light blue nav bar
+  @include bar-base;
+  color: #ffffff;
+  background-color: $color_blue1;
+  border-top: 1px solid #308ADE;
+  border-bottom: 1px solid #1D61A0;
+  
+  &:visited, &:hover, a:visited, a:hover {
+    background-color: $color_blue1;
+  }
+  
+  // icon type
+  // @include plus-minus;
+}
+
+@mixin bar2 { //dark blue nav bar
+  @include bar-base;
+  color: #ffffff;
+  background-color: $color_blue2;
+  border-top: 1px solid #15416A;
+  border-bottom: 1px solid #000F1E;
+  
+  &:visited, &:hover, a:visited, a:hover {
+    background-color: $color_blue2;
+  }
+  
+  // icon type
+  // @include left-arrow; (need to wait converting web font to build Mixin)
+}
+
+@mixin bar3 { //white nav bar
+  @include bar-base;
+  color: #000000;
+  background-color: #ffffff;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid $color_gray3;
+  font-weight: 400;
+  
+  &:visited, &:hover, a:visited, a:hover {
+    background-color: #ffffff;
+  }
+  
+  // icon type
+  // @include r-arrow;
+}
+
+@mixin bar4 { //gray nav bar title
+  @include bar-base;
+  color: #000000;
+  border-top: 1px solid $color_gray2;
+  border-bottom: 1px solid $color_gray2;
+  background-color: $color_gray2;
+
+}
+
+
+

@@ -1,0 +1,123 @@
+// Base: global rules that can be applied to any page
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-box-sizing: border-box;
+  @include box-sizing(border-box);
+}
+html {
+  height: 100%;
+  overflow: auto !important;
+}
+body {
+  -webkit-text-size-adjust: none; // stop zoom on rotation
+  background: white;
+  color: black;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: 1.2;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+a {
+  // Don't show the highlight of a link when tapped
+  -webkit-tap-highlight-color: rgba(229, 82, 19, 0.5);
+  color: $color-link;
+  text-decoration: none;
+  word-wrap: break-word;
+  &:focus, &:active, &:hover {
+    outline: 0;
+  }
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+@mixin prefixer_all($attr, $val) {
+  @include prefixer($attr, $val, webkit moz ms o spec);
+}
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mw-hide {
+  display: none;
+}
+.visuallyhidden {
+  border: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.mw-main-container {
+  margin: $margin;
+}
+.mw-page-title {
+  margin: .9em 0 .567em;
+  font-size: 250%;
+  font-weight: 300;
+}
+
+// bar style
+.mw_bar1 {
+  @include bar1;
+}
+
+.mw_bar2 {
+  @include bar2;
+}
+
+.mw_bar3 {
+  @include bar3;
+}
+
+.mw_bar4 {
+  @include bar4;
+}
+
+// only add right arrow when it is anchor
+a.mw_bar1,
+a.mw_bar2,
+a.mw_bar3 {
+  // @include r-arrow;
+}
+
+// button style
+.mw_btn1, .btn {
+  @include btn1; // gray gradient
+}
+
+.mw_btn2, .btn-primary {
+  @include btn2; // yellow gradient button
+}
+.mw-mb-10 {
+  margin-bottom: $margin;
+}
+.mw-neg-mgn {
+  margin: 0 -#{$margin};
+}
+
+// form elements
+select, textarea, input[type="text"], input[type="password"], 
+input[type="file"], input[type="datetime"], input[type="datetime-local"], 
+input[type="date"], input[type="month"], input[type="time"], input[type="week"], 
+input[type="number"], input[type="email"], input[type="url"], input[type="search"], 
+input[type="tel"], input[type="color"], input[type="range"], .uneditable-input {
+  display: inline-block;
+  padding: $padding;
+  line-height: 20px;
+  color: $text_color2;
+  vertical-align: middle;
+  background-color: white;
+  border: $border1;
+  @include appearance(none);
+  @include prefixer_all(border-radius, 0);
+}

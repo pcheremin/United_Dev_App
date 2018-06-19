@@ -1,0 +1,10 @@
+{
+  "host_map": [
+    "www.united.com => www-cn.united.com.edgekey.net",
+    "moov-origin.united.com => www-cn.united.com.edgekey.net",
+    "preview.united.com => preview.united.com.edgekey.net",
+    "moov-origin.preview.united.com => preview.united.com.edgekey.net",
+    "preprod.united.com => preprod.united.com.edgekey.net",
+    "moov-origin.preprod.united.com => preprod.united.com.edgekey.net"
+  ]
+}

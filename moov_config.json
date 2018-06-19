@@ -1,0 +1,20 @@
+{
+  "moovweb_project_format_version": "2.0.0",
+  "domain_model": "single_domain",
+  "taskrunner": {
+    "on_project_start_command": "node ./tasks/start",
+    "on_deploy_command": "node ./tasks/deploy",
+    "on_request_command": "node ./tasks/request"
+  },
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+  "layers": ["minify-js", "minify-css", "live-reload"],
+  "host_map": [
+    "www.united.com => www-cn.united.com.edgekey.net",
+    "moov-origin.united.com => www-cn.united.com.edgekey.net",
+    "preprod.united.com => preprod.united.com.edgekey.net",
+    "moov-origin.preprod.united.com => preprod.united.com.edgekey.net"
+  ],
+  "static_paths": {
+    "/moovweb_styleguide": "/html/styleguide.html"
+  }
+}

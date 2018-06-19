@@ -1,0 +1,64 @@
+// Variables
+
+$spacing-mini: 5px;
+$spacing-box: 10px; // for box-like spacing, like button padding
+$spacing-para: 15px; // for vertical rhythm, e.g. bottom margin for p, img, togglers, boxes, etc.
+$padding: 10px;
+$padding_dbl: $padding*2;
+$margin: 10px;
+$margin_half: $margin/2;
+
+// COLORS
+
+$color-danger: #F00; // red
+$color-input-border: #cccccc; // gray
+$color-link: #2172BA; // blue
+$color-white: #FFF; // white
+
+// text colors
+$text_color1: #000;
+$text_color2: #666;
+$text_color3: #999;
+
+// blue
+$color_blue1: #2172BA;
+$color_blue2: #002244;
+$color_blue3: #013366;
+$color_blue4: #003399;
+
+
+// gray
+$color_gray1: #F2F2F2; // section bg
+$color_gray2: #E6E6E6; //btn or tab bg
+$color_gray3: #CCC; //most border color
+$color_gray4: #666;
+$color_gray5: #999;
+
+
+// yellow
+$color_yellow1: #EDB727;
+$color_yellow2: #F7F4AD;
+
+// red
+$red1:   #CD202C;
+// transparent colors
+$trans_white1: rgba(255, 255, 255, 0.3);
+
+
+// border
+$border1: 1px solid $color_gray3;
+$base-border-input: 1px solid $color-input-border;
+$base-border-radius: 0px;
+
+// font
+$base-font-family: "open-sans", "Helvetica Neue", Helvetica, Calibri, Arial, "Lucida Grande", sans-serif;
+$base-font-size: 14px;
+$base-plus-3: $base-font-size + 3;
+$base-plus-6: $base-font-size + 6;
+$base-plus-9: $base-font-size + 9;
+
+$width-slide-menu: 100%;
+$width-icon-nav: 24px;
+$height-tap: 48px; // minimum acceptable mobile tap height
+$height-tap-padded: $height-tap - 2*$spacing-box;
+$height-filter-icon: 18px; // for category filters

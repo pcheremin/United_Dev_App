@@ -1,0 +1,44 @@
+// Button stye
+button {
+  text-transform: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+}
+@mixin btn-base {
+  @include appearance(none);
+  @include border-radius($base-border-radius);
+  border: 0;
+  font-weight: 500;
+  display: block;
+  padding: 7px 10px 9px 10px;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  &:visited, &:hover, a:visited, a:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin btn1 { // gray gradient button
+  @include btn-base;
+  @include background(linear-gradient(0deg,#ccc 0%,#dadada 23.47%,#e2e2e2 52.19%,#e5e5e4 100%));
+  color: #000000;  
+
+  &:visited, &:hover, a:visited, a:hover {
+    text-decoration:none;
+  }
+}
+
+
+@mixin btn2 { // yellow gradient button
+  @include btn-base;
+  @include background(linear-gradient(0deg,#df9210 .56%,#e39e17 12.18%,#e8ac20 32.9%,#ebb425 58.09%,#ecb727 100%));
+  color: #000000;
+  
+  &:visited, &:hover, a:visited, a:hover {
+    text-decoration:none;
+  }
+}

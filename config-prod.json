@@ -1,0 +1,6 @@
+{
+  "host_map": [
+    "www.united.com => www-cn.united.com.edgekey.net",
+    "moov-origin.united.com => www-cn.united.com.edgekey.net"
+  ]
+}

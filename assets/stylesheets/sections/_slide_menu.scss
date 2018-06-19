@@ -1,0 +1,66 @@
+.mw-body-content {
+  left: 0;
+  position: relative;
+  transition: 0.3s;
+  &.mw-slide-menu-active {
+    left: $width-slide-menu;
+  }
+}
+
+.mw-slide-menu {
+  height: 100%;
+  left: -$width-slide-menu;
+  overflow: scroll;
+  position: absolute;
+  top: 0;
+  width: $width-slide-menu;
+  z-index: 1;
+  background: #002244;
+}
+
+.mw-navigation {
+  border-bottom: 1px solid #15416A;
+}
+
+// the menu is full width of the screen, so there is no mask needed.
+// .mw-slide-menu-mask {
+//   display: none;
+//   .mw-slide-menu-active & {
+//     background: rgba(0, 0, 0,.5);
+//     display: block;
+//     height: 100%;
+//     position: absolute;
+//     width: 100%;
+//     z-index: 100;
+//   }
+// }
+
+.mw-slide-menu-header {
+  background-color: $color-blue2;
+  padding: $spacing-box;
+  .mw-logo {
+    display: inline-block;
+    text-align: center;
+    width: 91%;
+    img {
+      max-height: 35px;
+      padding: 7px;
+    }
+  }
+  .mw-icon-close-navigation {
+    @include sprites-close;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+  }
+}
+.mw-link-only {
+  text-decoration: underline;
+  
+  &:visited, &:hover, a:visited, a:hover {
+    text-decoration: underline;
+  }
+}
+.mw-toggler-bottom.dcm-processed {
+  display: none;
+}
